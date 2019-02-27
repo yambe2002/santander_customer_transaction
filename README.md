@@ -7,12 +7,12 @@ Logistic regression
  - lb: 0.839
 
 ### v.2
-Try adding PCA to v.1 (logistic regression)
+Try adding PCA (logistic regression)
  - local cv: cv: 0.8168678702098181
 ##### NOT GOOD IDEA TO APPLY PCA
 
 ### v.3
-Make some feature selections (logistic regression)
+Modify parameters (logistic regression)
  - SGDClassifier(loss='log', max_iter=5000, tol=1e-7, alpha=0.01)
  - local cv: 0.8515980352095942
 
@@ -21,3 +21,8 @@ Apply std scaling (logistic regression)
  - SGDClassifier(loss='log', max_iter=5000, tol=1e-7, alpha=0.01)
  - local cv: 0.8595493966729728
  - lb: 0.861
+
+### v.5
+Modify parameters (logistic regression)
+ - SGDClassifier(loss='log', max_iter=5000, tol=1e-7, alpha=0.3)
+ - local cv: 0.8597059678850029
