@@ -26,3 +26,9 @@ Apply std scaling (logistic regression)
 Modify parameters (logistic regression)
  - SGDClassifier(loss='log', max_iter=5000, tol=1e-7, alpha=0.3)
  - local cv: 0.8597059678850029
+
+### v.6
+Add Multi-layer perceptron
+ - MLPClassifier(solver='lbfgs', alpha=0.001, hidden_layer_sizes=(5, 2), random_state=1)
+ - local cv: 0.8543658603036868
+
