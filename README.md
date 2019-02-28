@@ -32,3 +32,6 @@ Add Multi-layer perceptron
  - MLPClassifier(solver='lbfgs', alpha=0.001, hidden_layer_sizes=(5, 2), random_state=1)
  - local cv: 0.8543658603036868
 
+### v.7
+Add logic to fix data skew (not used yet)
+
