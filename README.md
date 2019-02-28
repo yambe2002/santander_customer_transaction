@@ -1,5 +1,4 @@
-## Kaggle Sandanter Customer Transaction Prediction contest
-
+## Kaggle Sandanter Customer Transaction Prediction contest 
 ### v.1
 Logistic regression
  - SGDClassifier(loss='log', max_iter=50000, tol=1e-3, alpha=0.1)
@@ -38,5 +37,8 @@ Add logic to fix data skew (not used yet)
 ### v.8
 Add RandamForest
  - RandomForestClassifier(n_estimators=1000, criterion='entropy')
- - local cv: 0.7799133461183323
+ - local cv: (not correct)
+
+### v.9
+Add voting
 
