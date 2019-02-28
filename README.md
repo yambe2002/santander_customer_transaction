@@ -53,3 +53,7 @@ Ensenble
  - local cv: 0.87 (with data skew fix)
  - lb: 0.869
 
+### v.12
+ - Add GNB
+  - local cv: 0.8874777137937799 (with data skew fix)
+ 
