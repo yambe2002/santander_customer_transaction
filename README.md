@@ -37,8 +37,11 @@ Add logic to fix data skew (not used yet)
 ### v.8
 Add RandamForest
  - RandomForestClassifier(n_estimators=1000, criterion='entropy')
- - local cv: (not correct)
+ - local cv: 8.83 (with data skew fix)
 
 ### v.9
 Add voting
+
+### v.19
+Add RandamForest score (v.8)
 
