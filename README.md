@@ -42,6 +42,14 @@ Add RandamForest
 ### v.9
 Add voting
 
-### v.19
+### v.10
 Add RandamForest score (v.8)
+
+### v.11
+Ensenble
+ - SGDClassifier(loss='log', max_iter=5000, tol=1e-7, alpha=0.3)
+ - MLPClassifier(solver='lbfgs', alpha=0.001, hidden_layer_sizes=(5, 2), random_state=1)
+ - RandomForestClassifier(n_estimators=100, criterion='entropy')
+ - local cv: 0.87 (with data skew fix)
+ - lb: 0.869
 
