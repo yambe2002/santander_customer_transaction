@@ -55,5 +55,12 @@ Ensenble
 
 ### v.12
  - Add GNB
-  - local cv: 0.8874777137937799 (with data skew fix)
- 
+ - local cv: 0.8874777137937799 (with data skew fix)
+
+### v.13
+ - Add LinearDiscriminantAnalysis() - 0.8608604117713252 (with data skew fix)
+ - Add QuadraticDiscriminantAnalysis(tol=1e-12) - 0.820027075184469 (with data skew fix)
+ - Add AdaBoostClassifier(lg) - 0.8616254422551686 (with data skew fix)
+ - Add BaggingClassifier(lg) - 0.8614224931614438 (with data skew fix)
+
+
