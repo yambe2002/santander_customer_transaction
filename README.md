@@ -35,3 +35,8 @@ Add Multi-layer perceptron
 ### v.7
 Add logic to fix data skew (not used yet)
 
+### v.8
+Add RandamForest
+ - RandomForestClassifier(n_estimators=1000, criterion='entropy')
+ - local cv: 0.7799133461183323
+
