@@ -63,4 +63,7 @@ Ensenble
  - Add AdaBoostClassifier(lg) - 0.8616254422551686 (with data skew fix)
  - Add BaggingClassifier(lg) - 0.8614224931614438 (with data skew fix)
 
-
+### v.14
+ - Submit with GaussianNB
+ - local cv: 0.8883828469044662
+ - lb: 0.888
