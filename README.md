@@ -74,3 +74,8 @@ Ensenble
 ### v.16
  - Submit with LightGBM+kfold
  - lb: 0.899
+
+### v.17
+ - Add code of GridSearchCV
+
+
