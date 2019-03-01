@@ -71,4 +71,6 @@ Ensenble
 ### v.15
  - Add LightGBM+kfold implementation
 
-
+### v.16
+ - Submit with LightGBM+kfold
+ - lb: 0.899
