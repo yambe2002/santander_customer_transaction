@@ -67,3 +67,8 @@ Ensenble
  - Submit with GaussianNB
  - local cv: 0.8883828469044662
  - lb: 0.888
+
+### v.15
+ - Add LightGBM+kfold implementation
+
+
