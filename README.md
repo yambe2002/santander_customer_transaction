@@ -86,3 +86,7 @@ Ensenble
 ### v.19
  - LightGBM submission
  - lb: 0.899
+
+### v.20
+ - k_fold=5 with v.19
+ - lb: 0.899
