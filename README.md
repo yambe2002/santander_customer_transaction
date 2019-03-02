@@ -82,3 +82,7 @@ Ensenble
  - Trial submit: LightBGM, max_depth=127
  - local cv: 0.90775 (by grid search)
  - lb: 0.891 (fold_n=2)
+
+### v.19
+ - LightGBM submission
+ - lb: 0.899
