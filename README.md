@@ -94,3 +94,6 @@ Ensenble
 ### v.21
  - try overfit case ('max_depth': 127)
  - lb: 0.896(n_split=10)
+
+### v.21
+ - add code to apply data skew fix
