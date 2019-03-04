@@ -50,7 +50,23 @@ def objective(X, y, trial):
     score = 0.0
 
     params = {
-        'boosting_type': trial.suggest_categorical('boosting_type', ['gbdt', 'dart']),
+        'metric': 'auc',
+        'boosting_type': 'gbdt',
+        'objective': 'binary',
+        'min_data_in_leaf': trial.suggest_int('min_data_in_leaf', 10, 250),
+        'max_depth': trial.suggest_int('max_depth', 1, 63),
+        'learning_rate': trial.suggest_uniform('learning_rate', 0.01, 0.1),
+        'bagging_freq': trial.suggest_int('bagging_freq', 1, 7),
+        #'bagging_fraction': trial.suggest_uniform('bagging_fraction', 0.3, 0.9),
+        'feature_fraction': trial.suggest_uniform('feature_fraction', 0.6, 0.9),
+        'bagging_seed': 11,
+        'reg_alpha': trial.suggest_uniform('reg_alpha', 1.0, 3.0),
+        'reg_lambda': trial.suggest_uniform('reg_lambda', 3.0, 7.0),
+        'random_state': 42,
+        'verbosity': -1,
+        'subsample': trial.suggest_uniform('subsample', 0.7, 1.0),
+        'min_child_weight': trial.suggest_loguniform('min_child_weight', 1e-5,1e-2),
+        'num_threads': 4,
     }
 
     for fold_n, (train_index, valid_index) in enumerate(folds.split(X,y)):
@@ -62,10 +78,8 @@ def objective(X, y, trial):
         valid_data = lgb.Dataset(X_valid, label=y_valid)
             
         model = lgb.train(params,train_data,num_boost_round=20000,
-                        valid_sets = [train_data, valid_data],verbose_eval=300,early_stopping_rounds = 100)
-        
-        score += model.best_score /n_splits
-    
+                        valid_sets = [train_data, valid_data],verbose_eval=300,early_stopping_rounds=100)
+        score += model.best_score['valid_1']['auc'] / n_splits    
     return 1.0 - score
 
 
