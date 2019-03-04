@@ -55,6 +55,7 @@ def objective(X, y, trial):
         'objective': 'binary',
         'min_data_in_leaf': trial.suggest_int('min_data_in_leaf', 10, 250),
         'max_depth': trial.suggest_int('max_depth', 1, 63),
+        'num_leaves': trial.suggest_int('num_leaves', 17, 511),
         'learning_rate': trial.suggest_uniform('learning_rate', 0.01, 0.1),
         'bagging_freq': trial.suggest_int('bagging_freq', 1, 7),
         #'bagging_fraction': trial.suggest_uniform('bagging_fraction', 0.3, 0.9),
