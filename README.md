@@ -97,3 +97,7 @@ Ensenble
 
 ### v.21
  - add code to apply data skew fix
+
+### v.22
+ - another try with some param tuning
+ - lb: 0.898

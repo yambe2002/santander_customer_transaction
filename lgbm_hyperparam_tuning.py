@@ -49,24 +49,26 @@ folds = StratifiedKFold(n_splits=n_splits, shuffle=True, random_state=42)
 def objective(X, y, trial):
     score = 0.0
 
+    # 0.10090960619098333 (w/o data skew fix)
+    # min_data_in_leaf: 118, max_depth: 1, num_leaves:23
     params = {
         'metric': 'auc',
         'boosting_type': 'gbdt',
         'objective': 'binary',
-        'min_data_in_leaf': trial.suggest_int('min_data_in_leaf', 10, 250),
-        'max_depth': trial.suggest_int('max_depth', 1, 63),
-        'num_leaves': trial.suggest_int('num_leaves', 17, 511),
-        'learning_rate': trial.suggest_uniform('learning_rate', 0.01, 0.1),
-        'bagging_freq': trial.suggest_int('bagging_freq', 1, 7),
+        'min_data_in_leaf': trial.suggest_int('min_data_in_leaf', 10, 3000),
+        'max_depth': trial.suggest_int('max_depth', -1, 5),
+        'num_leaves': trial.suggest_int('num_leaves', 2, 511),
+        'learning_rate': 0.04019176517639987,
+        'bagging_freq': 3,
         #'bagging_fraction': trial.suggest_uniform('bagging_fraction', 0.3, 0.9),
-        'feature_fraction': trial.suggest_uniform('feature_fraction', 0.6, 0.9),
+        'feature_fraction': 0.8990901412442585,
         'bagging_seed': 11,
-        'reg_alpha': trial.suggest_uniform('reg_alpha', 1.0, 3.0),
-        'reg_lambda': trial.suggest_uniform('reg_lambda', 3.0, 7.0),
+        'reg_alpha':  1.1173044727720816,
+        'reg_lambda': 6.9285776442737514,
         'random_state': 42,
         'verbosity': -1,
-        'subsample': trial.suggest_uniform('subsample', 0.7, 1.0),
-        'min_child_weight': trial.suggest_loguniform('min_child_weight', 1e-5,1e-2),
+        'subsample': 0.8054415526396443,
+        'min_child_weight': 1.0653789180368052e-05,
         'num_threads': 4,
     }
 
@@ -86,8 +88,8 @@ def objective(X, y, trial):
 
 def main():
     f = partial(objective, X, y)
-    study = optuna.create_study()
-    study.optimize(f, n_trials=100)
+    study = optuna.create_study(study_name='lgbm_kfold_study', storage='sqlite:///storage.db')
+    study.optimize(f, n_trials=1000)
     print('params:', study.best_params)
 
 if __name__ == '__main__':
