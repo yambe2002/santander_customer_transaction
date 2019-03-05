@@ -101,3 +101,5 @@ Ensenble
 ### v.22
  - another try with some param tuning
  - lb: 0.898
+
+(v.20 with data skew fix might worth to try)
