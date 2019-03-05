@@ -9,6 +9,8 @@ from sklearn.model_selection import cross_validate
 from sklearn.model_selection import GridSearchCV
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis as LDA
 
+new_study = True
+
 ##
 
 train_df = pd.read_csv('input/train.csv')
@@ -49,8 +51,6 @@ folds = StratifiedKFold(n_splits=n_splits, shuffle=True, random_state=42)
 def objective(X, y, trial):
     score = 0.0
 
-    # 0.10090960619098333 (w/o data skew fix)
-    # min_data_in_leaf: 118, max_depth: 1, num_leaves:23
     params = {
         'metric': 'auc',
         'boosting_type': 'gbdt',
@@ -68,7 +68,7 @@ def objective(X, y, trial):
         'random_state': 42,
         'verbosity': -1,
         'subsample': 0.8054415526396443,
-        'min_child_weight': 1.0653789180368052e-05,
+        'min_child_weight': trial.suggest_uniform('min_child_weight', 0.1, 50.0),
         'num_threads': 4,
     }
 
@@ -86,10 +86,14 @@ def objective(X, y, trial):
     return 1.0 - score
 
 
+
 def main():
     f = partial(objective, X, y)
-    study = optuna.create_study(study_name='lgbm_kfold_study', storage='sqlite:///storage.db')
-    study.optimize(f, n_trials=1000)
+    if new_study:
+        study = optuna.create_study(study_name='lgbm_kfold_study', storage='sqlite:///storage.db')
+    else:
+        study = optuna.Study(study_name='lgbm_kfold_study', storage='sqlite:///storage.db')
+    study.optimize(f, n_trials=3000)
     print('params:', study.best_params)
 
 if __name__ == '__main__':
