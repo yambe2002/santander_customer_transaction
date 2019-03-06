@@ -9,7 +9,7 @@ from sklearn.model_selection import cross_validate
 from sklearn.model_selection import GridSearchCV
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis as LDA
 
-new_study = True
+new_study = False
 
 ##
 
@@ -55,9 +55,9 @@ def objective(X, y, trial):
         'metric': 'auc',
         'boosting_type': 'gbdt',
         'objective': 'binary',
-        'min_data_in_leaf': trial.suggest_int('min_data_in_leaf', 10, 3000),
-        'max_depth': trial.suggest_int('max_depth', -1, 5),
-        'num_leaves': trial.suggest_int('num_leaves', 2, 511),
+        'min_data_in_leaf': 2881,
+        'max_depth': 0,
+        'num_leaves': 3,
         'learning_rate': 0.04019176517639987,
         'bagging_freq': 3,
         #'bagging_fraction': trial.suggest_uniform('bagging_fraction', 0.3, 0.9),
@@ -69,6 +69,7 @@ def objective(X, y, trial):
         'verbosity': -1,
         'subsample': 0.8054415526396443,
         'min_child_weight': trial.suggest_uniform('min_child_weight', 0.1, 50.0),
+        #'min_child_weight': 30.087482032525,
         'num_threads': 4,
     }
 
