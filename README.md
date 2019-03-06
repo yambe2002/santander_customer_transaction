@@ -110,3 +110,8 @@ Ensenble
  - another tryout with param tuning
  - local: 0.898
  - lb: 0.899
+
+### v.25
+ - param tuning
+ - local: 0.9000721582954704
+ - lb: 0.899 (best so far)

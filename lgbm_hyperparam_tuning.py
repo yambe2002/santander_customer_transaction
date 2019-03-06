@@ -68,10 +68,9 @@ def objective(X, y, trial):
         'random_state': 42,
         'verbosity': -1,
         'subsample': 0.8054415526396443,
-        'min_child_weight': trial.suggest_uniform('min_child_weight', 0.1, 50.0), # 30.087482032525
+        'min_child_weight': trial.suggest_uniform('min_child_weight', 0.1, 50.0), # 38.138072621096654
         'num_threads': 4,
-        'num_iterations': trial.suggest_int('num_iterations', 100,400), # 100
-        'max_bin': trial.suggest_int('max_bin', 1, 511), # 255
+        'max_bin': trial.suggest_int('max_bin', 1, 511), # 483
     }
 
     for fold_n, (train_index, valid_index) in enumerate(folds.split(X,y)):
