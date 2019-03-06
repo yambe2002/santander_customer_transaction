@@ -106,3 +106,7 @@ Ensenble
  - v.20 with data skew fix
  - lb: 0.895
 
+### v.24
+ - another tryout with param tuning
+ - local: 0.898
+ - lb: 0.899
