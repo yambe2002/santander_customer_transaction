@@ -68,9 +68,10 @@ def objective(X, y, trial):
         'random_state': 42,
         'verbosity': -1,
         'subsample': 0.8054415526396443,
-        'min_child_weight': trial.suggest_uniform('min_child_weight', 0.1, 50.0),
-        #'min_child_weight': 30.087482032525,
+        'min_child_weight': trial.suggest_uniform('min_child_weight', 0.1, 50.0), # 30.087482032525
         'num_threads': 4,
+        'num_iteratoins': trial.suggest_int('num_iterations', 100,400), # 100
+        'max_bin': trial.suggest_int('max_bin', 1, 511), # 255
     }
 
     for fold_n, (train_index, valid_index) in enumerate(folds.split(X,y)):
@@ -83,7 +84,8 @@ def objective(X, y, trial):
             
         model = lgb.train(params,train_data,num_boost_round=20000,
                         valid_sets = [train_data, valid_data],verbose_eval=300,early_stopping_rounds=100)
-        score += model.best_score['valid_1']['auc'] / n_splits    
+        score += model.best_score['valid_1']['auc'] / n_splits
+    print(score)
     return 1.0 - score
 
 
