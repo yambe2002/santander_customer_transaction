@@ -3,4 +3,3 @@ input/*
 submission.csv
 .ipynb_checkpoints
 log.txt
-storage.db
