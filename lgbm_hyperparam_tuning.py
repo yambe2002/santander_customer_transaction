@@ -68,8 +68,8 @@ def objective(X, y, trial):
         'random_state': 42,
         'verbosity': -1,
         'subsample': trial.suggest_uniform('subsample', 0.75, 1.0), # 0.8054415526396443,
-        'min_child_weight': 38.138072621096654,
-        'num_threads': 4,
+        'min_child_weight': trial.suggest_uniform('min_child_weight', 30.0, 90.0), #38.138072621096654,
+        'num_threads': 6,
         'max_bin': 483,
     }
 
