@@ -61,14 +61,14 @@ def objective(X, y, trial):
         'learning_rate': 0.04019176517639987,
         'bagging_freq': 3,
         #'bagging_fraction': trial.suggest_uniform('bagging_fraction', 0.3, 0.9),
-        'feature_fraction': trial.suggest_uniform('feature_fraction', 0.75, 1.0), # 0.8990901412442585,
+        'feature_fraction': trial.suggest_uniform('feature_fraction', 0.80, 0.85), # 0.8453828656355421
         'bagging_seed': 11,
         'reg_alpha':  1.1173044727720816,
         'reg_lambda': 6.9285776442737514,
         'random_state': 42,
         'verbosity': -1,
-        'subsample': trial.suggest_uniform('subsample', 0.75, 1.0), # 0.8054415526396443,
-        'min_child_weight': trial.suggest_uniform('min_child_weight', 30.0, 90.0), #38.138072621096654,
+        'subsample': trial.suggest_uniform('subsample', 0.85, 0.90), # 0.8421287738494433},
+        'min_child_weight': trial.suggest_uniform('min_child_weight', 33.0, 38), #36.93038816860224,
         'num_threads': 6,
         'max_bin': 483,
     }

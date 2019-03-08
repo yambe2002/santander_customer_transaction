@@ -120,3 +120,8 @@ Ensenble
  - same as v.25, but lower learning_rate (0.04 -> 0.01)
  - local: 0.9002425993336695
  - lb: 0.900 (best so far)
+
+### v.27
+ - param tuning
+ - local: 0.9001731611321231
+ - lb: 0.900
