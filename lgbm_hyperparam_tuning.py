@@ -57,20 +57,20 @@ def objective(X, y, trial):
         'objective': 'binary',
         'min_data_in_leaf': 2881,
         'max_depth': 0,
-        'num_leaves':  3,
+        'num_leaves': trial.suggest_int('num_leaves', 2, 5), #3,
         'learning_rate': 0.04019176517639987,
         'bagging_freq': 3,
         #'bagging_fraction': trial.suggest_uniform('bagging_fraction', 0.3, 0.9),
         'feature_fraction': trial.suggest_uniform('feature_fraction', 0.80, 0.85), # 0.8453828656355421
         'bagging_seed': 11,
-        'reg_alpha':  1.1173044727720816,
-        'reg_lambda': 6.9285776442737514,
+        'reg_alpha':  trial.suggest_uniform('reg_alpha', 0.9, 2), #1.1173044727720816,
+        'reg_lambda': trial.suggest_uniform('reg_lambda', 4, 8), #6.9285776442737514,
         'random_state': 42,
         'verbosity': -1,
         'subsample': trial.suggest_uniform('subsample', 0.85, 0.90), # 0.8421287738494433},
         'min_child_weight': trial.suggest_uniform('min_child_weight', 33.0, 38), #36.93038816860224,
         'num_threads': 6,
-        'max_bin': 483,
+        'max_bin': trial.suggest_int('max_bin', 400, 600), #483,
     }
 
     for fold_n, (train_index, valid_index) in enumerate(folds.split(X,y)):
