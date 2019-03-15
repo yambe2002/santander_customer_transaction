@@ -9,13 +9,14 @@ from sklearn.model_selection import cross_validate
 from sklearn.model_selection import GridSearchCV
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis as LDA
 
-new_study = False
+use_stack = True
+new_study = True
 
 ##
 
-train_df = pd.read_csv('input/train.csv')
+train_df = pd.read_csv('input/train' + ('_stack' if use_stack else '') + '.csv')
 #train_df = pd.read_csv('input/train_min.csv')
-test_df = pd.read_csv('input/test.csv')
+test_df = pd.read_csv('input/test'  + ('_stack' if use_stack else '') + '.csv')
 
 do_lda = False
 fix_data_skew = False
