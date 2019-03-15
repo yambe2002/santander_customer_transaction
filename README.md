@@ -125,3 +125,8 @@ Ensenble
  - param tuning
  - local: 0.9001731611321231
  - lb: 0.900
+
+### v.28
+ - 1st stacking trial
+ - local: 1.0??
+ - lb: 0.669 - something is wrong
