@@ -130,3 +130,8 @@ Ensenble
  - 1st stacking trial
  - local: 1.0??
  - lb: 0.669 - something is wrong
+
+ ### v.29
+  - 2nd stacking trial
+  - local: 1.0??
+  - lb: 0.539 - something is wrong
