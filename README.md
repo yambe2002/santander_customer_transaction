@@ -140,3 +140,9 @@ Ensenble
  - lgbm with params from other models
  - local: 0.8945364695860429
  - lb: 0.895
+
+### v.31
+ - lgbm with additional params without other models
+ - local: 0.899363708306008
+ - lb: not yet
+
