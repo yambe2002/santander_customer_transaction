@@ -149,7 +149,7 @@ Ensenble
 ### v.32
  - lgbm without k-fold (test_size:0.2), with additional params
  - local: 0.9013526252596797
- - lb: not yet
+ - lb: 0.899
 
 ### v.33
  - lgbm without k-fold (test_size:0.2), without additional parms
