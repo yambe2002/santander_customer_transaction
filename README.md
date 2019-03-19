@@ -144,14 +144,25 @@ Ensenble
 ### v.31
  - lgbm with additional params without other models
  - local: 0.899363708306008
- - lb: not yet
 
 ### v.32
  - lgbm without k-fold (test_size:0.2), with additional params
  - local: 0.9013526252596797
- - lb: 0.899
+ - lb: 0.899 - overfit
 
 ### v.33
  - lgbm without k-fold (test_size:0.2), without additional parms
  - local: 0.901284141805979
- - lb: not yet
+ - lb: 0.899 - overfit
+
+##### memo
+ v.27 (fold_n= 3): 0.8985222032945831
+ v.27 (fold_n= 5): 0.9001731611321231
+ v.27 (fold_n= 7): 0.899939814638654
+ v.27 (fold_n=10): 0.8999005238619828
+
+ ### v.34
+ - modify add_feature to use std scaling
+ - add best params from kernel
+ - local: 0.900132951781824 (with kernel params, without additional features)
+ - local: 0.8996380915376934 (with kernel params, with all additinal features)
