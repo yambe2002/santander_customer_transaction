@@ -166,3 +166,14 @@ Ensenble
  - add best params from kernel
  - local: 0.900132951781824 (with kernel params, without additional features)
  - local: 0.8996380915376934 (with kernel params, with all additinal features)
+
+### v.35
+ - modify add_feature to use (mean/max/min/std/mean_dev_std/sum/abs_sum_mean) from only all features
+ - local mean: 0.899866255 (no additional features, use kernal params, no aug, fast)
+ - local mean: 0.899897791 (with additional features, use kernal params, no aug, fast)
+ - local mean: 0.899504169 (no additional features, use my params, no aug, fast)
+  - local mean: 0.899481008 (with additional features, use my params, no aug, fast)
+ 
+ ## check why local scores are below 0.90 eval?
+  - diff with v.26
+
