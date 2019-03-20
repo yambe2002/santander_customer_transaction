@@ -172,8 +172,7 @@ Ensenble
  - local mean: 0.899866255 (no additional features, use kernal params, no aug, fast)
  - local mean: 0.899897791 (with additional features, use kernal params, no aug, fast)
  - local mean: 0.899504169 (no additional features, use my params, no aug, fast)
-  - local mean: 0.899481008 (with additional features, use my params, no aug, fast)
+ - local mean: 0.899481008 (with additional features, use my params, no aug, fast)
  
- ## check why local scores are below 0.90 eval?
-  - diff with v.26
-
+### v.36
+ - make params/seeds same as v.26 (local cv should be: 0.9002425993336695, no additional, my param, no aug, fast)
