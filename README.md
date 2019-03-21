@@ -176,3 +176,11 @@ Ensenble
  
 ### v.36
  - make params/seeds same as v.26 (local cv should be: 0.9002425993336695, no additional, my param, no aug, fast)
+ - local mean: 0.900231796, lb: 0.900  (with additional features, use my params, no aug, fast)
+ - additional features not using std scaling
+ - cov with target:
+  sum_0_200               0.449986
+  abs_sum_mean_0_200   -152.628739
+
+
+

@@ -4,3 +4,6 @@ submission.csv
 .ipynb_checkpoints
 log.txt
 storage.db
+lgb_all_predictions.csv
+lgb_oof.csv
+lgb_submission.csv
