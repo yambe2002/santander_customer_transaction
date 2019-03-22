@@ -187,4 +187,8 @@ Ensenble
  - local mean: 0.901320857
  - lb: 0.900 (best so far)
 
-
+### feature trial
+ - v.37 code, all local mean, my paran, no aug, fast
+ - 0.9002425993336695: no additional
+ - 0.900231796: with additional(no std scale, sum_0_200, abs_sum_mean_0_200)
+ 
