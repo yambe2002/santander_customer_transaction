@@ -188,7 +188,8 @@ Ensenble
  - lb: 0.900 (best so far)
 
 ### feature trial
- - v.37 code, all local mean, my paran, no aug, fast
- - 0.9002425993336695: no additional
- - 0.900231796: with additional(no std scale, sum_0_200, abs_sum_mean_0_200)
- 
+ - v.37 code, all local mean, my param, no aug, fast
+ - 0.900242599: no additional
+ - 0.900231796: with additional(no std scale, [mean,max,min,std,mean_dev_std,sum,abs_sum_mean] of all)
+ - 0.899450510: with additional(std scale, [mean,max,min,std,mean_dev_std,sum,abs_sum_mean] of all)
+ - 0.900017835: with additional(no std scale, [sum_0_200,sum_0_5,...sum_190_195])
