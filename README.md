@@ -182,5 +182,9 @@ Ensenble
   sum_0_200               0.449986
   abs_sum_mean_0_200   -152.628739
 
+### v.37
+ - no additional, my param, with aug, no fast
+ - local mean: 0.901320857
+ - lb: 0.900 (best so far)
 
 
