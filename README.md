@@ -193,11 +193,7 @@ Ensenble
  - 0.900231796: with additional(no std scale, [mean,max,min,std,mean_dev_std,sum,abs_sum_mean] of all)
  - 0.899450510: with additional(std scale, [mean,max,min,std,mean_dev_std,sum,abs_sum_mean] of all)
  - 0.900017835: with additional(no std scale, [sum_0_200,sum_0_5,...sum_190_195])
-
-### v.38
- - v.37 code, kernel param, with aug, not fast, with additional(no std scale, [mean, min, max, ... abs_sum_mean] of all and each by 5)
- - local mean:
- - lb:
+ - [special] 0.891135677: kernel param, with aug, not fast, with additional(no std scale, [mean, min, max, ... abs_sum_mean] of all and each by 5)
 
 
 
