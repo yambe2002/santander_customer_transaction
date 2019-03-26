@@ -183,7 +183,7 @@ Ensenble
   abs_sum_mean_0_200   -152.628739
 
 ### v.37
- - no additional, my param, with aug, no fast
+ - no additional, my param, with aug, no fast, aug_N=5
  - local mean: 0.901320857
  - lb: 0.900 (best so far)
 
@@ -195,5 +195,10 @@ Ensenble
  - 0.900017835: with additional(no std scale, [sum_0_200,sum_0_5,...sum_190_195])
  - [special] 0.891135677: kernel param, with aug, not fast, with additional(no std scale, [mean, min, max, ... abs_sum_mean] of all and each by 5)
 
+### v.38
+ - same as v.37 code
+ - no additional, kernel param, with aug, no fast, aug_N=10
+ - local mean: 0.901727458
+ - lb: 0.901 (best so far, 1716->483)
 
 
