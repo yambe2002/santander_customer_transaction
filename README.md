@@ -201,4 +201,13 @@ Ensenble
  - local mean: 0.901727458
  - lb: 0.901 (best so far, 1716->483)
 
+### v.39
+ - same as v.37 code
+ - no additional, my param, with aug, no fast, aug_N=15
+ - local mean: 0.901479053
+ - lb: 0.900 (best using my param, guess)
+
+
+
+
 
