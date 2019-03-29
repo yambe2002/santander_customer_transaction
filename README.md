@@ -37,7 +37,7 @@ Add logic to fix data skew (not used yet)
 ### v.8
 Add RandamForest
  - RandomForestClassifier(n_estimators=1000, criterion='entropy')
- - local cv: 8.83 (with data skew fix)
+ - local cv: 0.83 (with data skew fix)
 
 ### v.9
 Add voting
@@ -205,8 +205,13 @@ Ensenble
  - same as v.37 code
  - no additional, my param, with aug, no fast, aug_N=15
  - local mean: 0.901479053
- - lb: 0.900 (best using my param, guess)
+ - lb: 0.900 (best with my param, guess)
 
+### v.40
+ - same as v.37 code
+ - no additional, kernel param, with aug, no fast, aug_N=20
+ - local mean: 0.901776835
+ - lb: 0.901 (best so far, no change, 540->540)
 
 
 
