@@ -219,4 +219,8 @@ Ensenble
  - local mean:0.901727883
  - lb: 0.901 (no change)
 
-
+### v.42
+ - tuned kernel param
+ - no additional, kernel param (tuned), with aug, no fast, aug_N=10
+ - local mean:0.901629791
+ - lb: 0.901 (no change)
