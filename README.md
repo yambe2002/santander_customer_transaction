@@ -224,3 +224,6 @@ Ensenble
  - no additional, kernel param (tuned), with aug, no fast, aug_N=10
  - local mean:0.901629791
  - lb: 0.901 (no change)
+
+
+Final submission: v.40 (best with kernel param) and v.39 (best with my param)
